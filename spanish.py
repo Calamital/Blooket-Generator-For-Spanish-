@@ -4,7 +4,7 @@ translator = GoogleTranslator(source = "es", target = "en")
 eswords: list[str] = []
 enwords: list[str] = []
 
-with open("input.txt", "r") as inputfile:
+with open("Blooket-Generator-For-Spanish-\input.txt", "r") as inputfile:
     eswords = "".join(list(inputfile)).split("\n")
     for index in range(len(eswords)):
         eswords[index] = eswords[index].replace(",", " /")
@@ -12,7 +12,7 @@ with open("input.txt", "r") as inputfile:
 for word in eswords:
     enwords.append(translator.translate(word))
 
-with open("output.csv", "w") as outputfile:
+with open("Blooket-Generator-For-Spanish-\output.csv", "w") as outputfile:
     outputfile.write(
         """\"Blooket
 Import Template\",,,,,,,
